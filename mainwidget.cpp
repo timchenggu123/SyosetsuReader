@@ -16,3 +16,8 @@ MainWidget::MainWidget()
 
     show();
 }
+
+void MainWidget::on_ExitButton_clicked()
+{
+    close();
+}

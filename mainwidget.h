@@ -16,6 +16,8 @@ class MainWidget: public WidgetCommon, private Ui::MainWidget
 public:
     MainWidget();
 
+private slots:
+    void on_ExitButton_clicked();
 };
 
 #endif // MAINWIDGET_H
