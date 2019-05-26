@@ -1,14 +1,18 @@
+#include "Platform.h"
 #include "mainwidget.h"
 #include "ui_mainwidget.h"
+#include <QKeyEvent>
+#include <QMouseEvent>
 
-MainWidget::MainWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::MainWidget)
-{
-    ui->setupUi(this);
-}
+#include "Platform.h"
 
-MainWidget::~MainWidget()
+MainWidget::MainWidget()
 {
-    delete ui;
+    QFont f(font());
+    f.setPointSize(Platform::get()->getDefaultFontSize() * 3/2);
+    setFont(f);
+
+    setupUi(this);
+
+    show();
 }

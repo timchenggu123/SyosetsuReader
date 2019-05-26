@@ -1,11 +1,12 @@
 #include "mainwidget.h"
-#include <QApplication>
+#include <Application.h>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWidget w;
-    w.show();
-
-    return a.exec();
+    Application app(argc,argv);
+    app.setApplicationName("calculator");
+    if ( !app.init() ) return 1;
+    MainWidget mainWidget;
+    return app.exec();
 }
+

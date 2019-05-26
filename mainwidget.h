@@ -1,22 +1,21 @@
 #ifndef MAINWIDGET_H
 #define MAINWIDGET_H
 
-#include <QWidget>
+#include "WidgetCommon.h"
+#include "ui_mainwidget.h"
 
-namespace Ui {
-class MainWidget;
+namespace UI
+{
+    class MainWidget: public Ui_MainWidget {};
 }
 
-class MainWidget : public QWidget
+class MainWidget: public WidgetCommon, private Ui::MainWidget
 {
     Q_OBJECT
 
 public:
-    explicit MainWidget(QWidget *parent = 0);
-    ~MainWidget();
+    MainWidget();
 
-private:
-    Ui::MainWidget *ui;
 };
 
 #endif // MAINWIDGET_H
