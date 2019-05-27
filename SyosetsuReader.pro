@@ -6,6 +6,7 @@
 
 QT       += core gui
 QT       += svg
+QT       +=
 CONFIG += QT
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,8 +18,11 @@ include(../free/common/common.pri)
 LIBS  += -L../free/build-common-Kobo-Release -lcommon
 
 SOURCES += main.cpp\
-        mainwidget.cpp
+        mainwidget.cpp \
+    documentreader.cpp
 
-HEADERS  += mainwidget.h
+HEADERS  += mainwidget.h \
+    documentreader.h
 
-FORMS    += mainwidget.ui
+FORMS    += mainwidget.ui \
+    documentreader.ui
